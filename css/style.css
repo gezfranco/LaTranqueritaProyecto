@@ -1,0 +1,252 @@
+*{margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;}
+
+body{
+    width: 100%;
+    height: 100vh;}
+
+/****************Estilos Generales*******************/
+
+
+/***Nombres***/
+.articuloUno{
+    grid-area: art1 ;}
+         
+.articuloDos{
+    grid-area: art2 ;}
+        
+.articuloTres{
+    grid-area: art3 ;}
+            
+.primerParrafo{
+    grid-area: texto1 ;}
+        
+.segundoParrafo{
+    grid-area: texto2 ;}
+            
+.tercerParrafo{
+    grid-area: texto3 ;}
+
+/*Nombrar cada area del cuerpo*/
+    
+header{
+    grid-area: cabeza;}
+    
+main{
+    grid-area: contenido;}
+    
+footer{
+    grid-area: pie;}
+
+
+/*Header General*/
+
+ul{list-style: none;}
+
+nav ul{
+    list-style: none;
+    padding:25px}
+
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding-left: 5px;}    
+     
+nav ul li :hover{
+    text-decoration: underline;
+    color: #bd2308;
+    background-color: #fca503;
+    border: dotted;} 
+
+h3 img{
+    width: 300px;
+    height: 150px;}
+iframe{
+        width:85%; 
+        height: 55vh; 
+        margin-left: 7.5%}
+
+
+/*Section General*/
+
+
+main{background-color:grey;}
+
+section{background-color: black;}
+
+article p{color:#bd2308;}
+
+
+
+/* Desktop */
+.encabezadoFlexible{
+    display: grid; 
+    grid-template-columns: 1fr 5fr;
+    background-color: #fca503;
+    justify-content: center; 
+    align-items: center;}
+    
+
+.barraNavegacion{
+    display: flex;
+    background-color: #bd2308 ;
+    justify-content: space-around; 
+    font-size: 45px;
+    padding-top:5rem; 
+    padding-bottom: 5rem;}
+
+.articleFlex{
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    padding: 15px;}
+    
+ #articulosIndex{
+    width: 100%;
+    display: grid;
+    grid-template-areas:"art1 art2 art3"
+                        "texto1 texto2 texto3" ;
+    grid-template-columns: 1fr 1fr 1fr;}
+
+#cuerpoGrid{
+    display: grid;
+    grid-template-areas:"cabeza"
+                        "contenido"
+                        "pie" ; 
+    grid-template-columns: 100%;}
+
+ /* Grid Menu*/
+    
+ .mainmenu{
+    background-color: grey; 
+    display: grid ; 
+    grid-template-rows: repeat(8, 1fr);
+    justify-content: center;
+    align-items: center}
+
+.mainmenu img{height: 50vh; 
+    width: 75vh;}    
+
+/*Footer*/
+
+.footerFlex{display: flex; 
+    flex-flow: row wrap; 
+    justify-content: space-around; 
+    align-items: center; 
+    text-align: center;
+    font-size: 50px;
+    color: #fca503 ;}
+    
+footer{
+    background-color: #bd2308;
+    padding: 10px;}    
+        
+ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);}
+.insta{
+    height: 50px;}
+        
+.wp{
+    height: 50px; }
+
+
+
+/*Tablets*/
+
+@media (min-width: 481px) and (max-width: 1239px) {
+#articulosIndex{
+    width: 100%;
+    display: grid;
+    grid-template-areas:"art1"
+                        "texto1" 
+                        "art2"
+                        "texto2"  
+                        "art3"
+                        "texto3";
+    grid-template-columns: 100%;
+       ;}
+    
+#cuerpoGrid{
+    display: grid;
+    grid-template-areas:"cabeza"
+                        "contenido"
+                        "pie" ; 
+    grid-template-columns: 100%;}
+    
+.barraNavegacion{
+    display: flex;
+    flex-direction: column;
+    background-color: #fca503 ;
+    justify-content: space-around; 
+    font-size: 45px;
+    padding-top:5rem; 
+    padding-bottom: 5rem;}
+
+ /* Grid Menu*/
+    
+ .mainmenu{
+    background-color: grey; 
+    display: grid ; 
+    grid-template-rows: repeat(8, 1fr);
+    justify-content: center;
+    align-items: center}
+
+.mainmenu img{height: 35vh; 
+    width: 50vh;}  
+
+        
+}
+
+/*Mobile*/
+
+@media (max-width: 479px) {
+
+#articulosIndex{
+        width: 100%;
+        display: grid;
+        grid-template-areas:"art1"
+                            "texto1" 
+                            "art2"
+                            "texto2"  
+                            "art3"
+                            "texto3";
+        grid-template-columns: 100%;
+           ;}
+        
+#cuerpoGrid{
+    display: grid;
+    grid-template-areas:"cabeza"
+                        "contenido"
+                        "pie" ; 
+    grid-template-columns: 100%;}
+        
+.barraNavegacion{
+    display: flex;
+    flex-direction: column;
+    background-color: #fca503 ;
+    justify-content: space-around; 
+    font-size: 45px;
+    padding-top:5rem; 
+    padding-bottom: 5rem;}
+ /* Grid Menu*/
+    
+ .mainmenu{
+    background-color: grey; 
+    display: grid ; 
+    grid-template-rows: repeat(8, 1fr);
+    justify-content: center;
+    align-items: center}
+
+.mainmenu img{height: 25vh; 
+    width: 40vh;}  
+
+
+
+}

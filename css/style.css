@@ -73,9 +73,9 @@ iframe{
 /*Section General*/
 
 
-main{background-color:grey;}
+main{background-image: linear-gradient(black 10% , white 100%);}
 
-section{background-color: black;}
+section{background-image: linear-gradient(to top, black 60%, white 100%)}
 
 article p{color:#bd2308;}
 
@@ -96,7 +96,8 @@ article p{color:#bd2308;}
     justify-content: space-around; 
     font-size: 45px;
     padding-top:5rem; 
-    padding-bottom: 5rem;}
+    padding-bottom: 5rem; 
+    width: auto;}
 
 .articleFlex{
     display: flex; 
@@ -105,8 +106,90 @@ article p{color:#bd2308;}
     align-items: center; 
     text-align: center;
     padding: 15px;}
-    
- #articulosIndex{
+
+/*Transiciones*/
+
+.articuloUno{
+    transition: all 1s;}
+
+.articuloDos{
+    transition: all 1s;}
+
+.articuloTres{
+    transition: all 1s;}
+
+.articuloUno:hover{
+    width: 600px; 
+    height: 300px;}
+
+.articuloDos:hover{
+    width: 600px; 
+    height: 300px;}
+
+.articuloTres:hover{
+    width: 600px; 
+    height: 300px;}
+
+
+
+/***Animaciones***/
+
+.articleFlex p{ 
+    animation-name: fotos; 
+    animation-iteration-count: 1; 
+    animation-duration: 1s;}
+
+.mainmenu img{ 
+	-webkit-animation: blink-1 0.6s both;
+	        animation: blink-1 0.6s both;
+            animation-iteration-count: 3;
+} 
+
+
+/* KEYFRAMES */
+
+
+ @-webkit-keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  @keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  
+
+@keyframes fotos{ 
+    from{
+        transform: translate(-400px);
+    }
+
+    to{
+        transform: translate(0);
+    }
+}
+
+
+
+
+
+ /*** Grid ***/
+
+#articulosIndex{
     width: 100%;
     display: grid;
     grid-template-areas:"art1 art2 art3"
@@ -119,10 +202,8 @@ article p{color:#bd2308;}
                         "contenido"
                         "pie" ; 
     grid-template-columns: 100%;}
-
- /* Grid Menu*/
     
- .mainmenu{
+.mainmenu{
     background-color: grey; 
     display: grid ; 
     grid-template-rows: repeat(8, 1fr);
